@@ -1,25 +1,31 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Homecontroller;
 
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
 
-Route::get('/contact', function () {
-    return view('contact');
-});
+Route::get('/', [Homecontroller::class, 'home']);
 
-Route::get('/about', function () {
-    return view('about');
-});
+// Route::get('/contact', function () {
+//     return view('contact');
+// });
 
-Route::get('/', function () {
-    $data = [
-        'num1' => 'value1',
-        'num2' => 'value2',
-        'num3' => 'value3'
-    ];
-    return view('home', ['data'=>$data]);
-});
+Route::get('/about', [Homecontroller::class, 'about']);
 
+// Route::get('/about', function () {
+//     return view('about');
+// });
+
+Route::get('/contact', [Homecontroller::class, 'contact']);
+
+// Route::get('/', function () {
+//     $data = [
+//         'num1' => 'value1',
+//         'num2' => 'value2',
+//         'num3' => 'value3'
+//     ];
+//     return view('home', ['data'=>$data]);
+// });
