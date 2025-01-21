@@ -1,14 +1,16 @@
 @extends('layout')
 
 @section('content')
-    <h3>Home Page</h3>
-    <?php 
-        foreach($data as $np => $num){
-            echo $np. "=" . $num ."<br>";
-        }
-    ?>
-
-    @foreach($data as $num => $value)
-        {{$num . "=" . $value }} <br>
+<br><br>
+    @foreach ($data as $num => $value)
+        <div class="card">
+            <h5 class="card-header">Featured</h5>
+            <div class="card-body">
+                <h5 class="card-title">Special title treatment</h5>
+                <p class="card-text"> {{ $num . '=' . $value }} </p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        <br>
     @endforeach
 @endsection

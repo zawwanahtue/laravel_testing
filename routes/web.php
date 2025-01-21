@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Homecontroller;
+use App\Http\Controllers\ContactController;
 
 // Route::get('/', function () {
 //     return view('home');
@@ -19,7 +20,7 @@ Route::get('/about', [Homecontroller::class, 'about']);
 //     return view('about');
 // });
 
-Route::get('/contact', [Homecontroller::class, 'contact']);
+Route::get('/contact', [ContactController::class, 'contact']);
 
 // Route::get('/', function () {
 //     $data = [
