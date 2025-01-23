@@ -11,11 +11,11 @@ class Homecontroller extends Controller
         $data = [
             'num1' => 'value1',
             'num2' => 'value2',
-            'num3' => 'value3'
+            'num3' => 'value3',
         ];
-        return view('home', ['data'=>$data]);
+        return view('home', ['data' => $data]);
     }
-
+    
     public function about()
     {
         return view("about");
