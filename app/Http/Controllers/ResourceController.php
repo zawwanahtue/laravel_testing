@@ -14,7 +14,7 @@ class ResourceController extends Controller
     public function index()
     {
         $data = post_table::all();
-        return view('contact', ['data'=>$data]);
+        return view('/contact', ['data'=>$data]);
     }
 
     /**         
@@ -22,7 +22,7 @@ class ResourceController extends Controller
      */
     public function create()
     {
-        //
+        return view('/create');
     }
 
     /**

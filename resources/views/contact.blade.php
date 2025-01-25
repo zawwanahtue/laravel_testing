@@ -3,6 +3,10 @@
 @section('content')
     <br><br>
     <div>
+        <a href="/contact/create" class="btn btn-success">create form</a>
+    </div>
+    <br>
+    <div>
         <table class="table">
             <thead>
                 <tr>
