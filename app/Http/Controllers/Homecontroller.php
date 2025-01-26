@@ -3,21 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\post_table;
 
 class Homecontroller extends Controller
 {
     public function home()
     {
-        $data = [
-            'num1' => 'value1',
-            'num2' => 'value2',
-            'num3' => 'value3',
-        ];
+        $data = new post_table()->all();
         return view('home', ['data' => $data]);
     }
     
     public function about()
     {
         return view("about");
+    }
+
+    public function simple()
+    {
+        return view("simple");
     }
 }

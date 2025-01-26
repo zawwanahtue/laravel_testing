@@ -17,6 +17,7 @@ Route::get('/', [Homecontroller::class, 'home']);
 
 Route::get('/about', [Homecontroller::class, 'about']);
 Route::resource('/contact', ResourceController::class);
+Route::get('/simple', [Homecontroller::class, 'simple']);
 
 // Route::get('/about', function () {
 //     return view('about');

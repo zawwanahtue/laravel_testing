@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\post_table;
+use Illuminate\Support\Facades\Route;
 
 class ResourceController extends Controller
 {
@@ -30,7 +31,11 @@ class ResourceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $post = new post_table();
+        $post->name = $request->name;
+        $post->description = $request->description;
+        $post->save();
+        return redirect('/contact');
     }
 
     /**
@@ -38,7 +43,8 @@ class ResourceController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = post_table::find($id);
+        return view('/show', ['data'=>$data]);
     }
 
     /**

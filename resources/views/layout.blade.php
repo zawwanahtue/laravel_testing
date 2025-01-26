@@ -22,6 +22,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contact">Contact Page</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="simple">Simple test Page</a>
+                </li>
             </ul>
         </div>
     </nav>

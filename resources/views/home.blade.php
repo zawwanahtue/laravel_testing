@@ -2,15 +2,15 @@
 
 @section('content')
 <br><br>
-    @foreach ($data as $num => $value)
+    @foreach ($data as $post)
         <div class="card">
             <h5 class="card-header">Featured</h5>
             <div class="card-body">
-                <h5 class="card-title">Special title treatment</h5>
-                <p class="card-text"> {{ $num . '=' . $value }} </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <p class="card-text"> {{ 'name =' . $post->name }} </p>
+                <p class="card-text"> {{ 'description =' . $post->description }} </p>
+                <a href="/contact/{{$post->id}}" class="btn btn-primary">View</a>
             </div>
         </div>
-        <br>
+        <br>    
     @endforeach
 @endsection
